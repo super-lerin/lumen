@@ -1807,3 +1807,22 @@ section,
   color: #FFF;
   transform: scale(1.1);
 }
+
+/* --- Correções de Legibilidade - Seção Hero --- */
+.icon-box h4,
+.icon-box p {
+  color: #444444;
+}
+
+.icon-box h4 {
+  color: #2c4964;
+}
+
+.icon-box i {
+  color: #1977cc;
+}
+
+.hero .welcome h2,
+.hero .welcome p {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
