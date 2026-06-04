@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -23,6 +24,25 @@
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
   <link href="assets/css/main.css" rel="stylesheet">
+  
+  <style>
+    /* CSS adicional para a nova seção de Tratamento */
+    .treatment-list {
+      list-style: none;
+      padding: 0;
+    }
+    .treatment-list li {
+      padding-bottom: 10px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .treatment-list i {
+      color: #1977cc;
+      font-size: 20px;
+      padding-right: 10px;
+      margin-top: 2px;
+    }
+  </style>
 </head>
 
 <body class="index-page">
@@ -34,6 +54,7 @@
         <div class="contact-info d-flex align-items-center">
           <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:lucacostalccs@gmail.com">lucacostalccs@gmail.com</a></i>
           <i class="bi bi-phone d-flex align-items-center ms-4"><span>219672267288</span></i>
+          <i class="bi bi-clock d-flex align-items-center ms-4 d-none d-md-flex"><span>Internações e remoções 24hrs todos os dias</span></i>
         </div>
         <div class="social-links d-none d-md-flex align-items-center">
           <a href="#" class="twitter"><i class="bi bi-twitter-x"></i></a>
@@ -54,6 +75,7 @@
           <ul>
             <li><a href="#hero" class="active">Início</a></li>
             <li><a href="#about">Sobre</a></li>
+            <li><a href="#tratamento">Tratamento</a></li>
             <li><a href="#gallery">Galeria</a></li>
             <li><a href="#doctors">Equipe</a></li>
             <li><a href="#faq">Dúvidas</a></li>
@@ -74,7 +96,7 @@
       <div class="container position-relative">
         <div class="welcome position-relative" data-aos="fade-down" data-aos-delay="100">
           <h2>Lúmen: Clareza no caminho da recuperação</h2>
-          <p>Consultoria especializada e suporte terapêutico humanizado para transformar vidas através do acolhimento consciente.</p>
+          <p>Tratamento humanizado, com objetivo de desenvolver valores e resgatar a dignidade humana e o recomeço de vida.</p>
         </div>
 
         <div class="content row gy-4">
@@ -100,9 +122,9 @@
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
                   <div class="icon-box" data-aos="zoom-out" data-aos-delay="400">
-                    <i class="bi bi-shield-check"></i>
-                    <h4>Consultoria Especializada</h4>
-                    <p>Orientação segura para famílias na tomada de decisão e na busca pelo melhor plano terapêutico.</p>
+                    <i class="bi bi-people-fill"></i>
+                    <h4>Juntos somos mais fortes</h4>
+                    <p>Orientação segura para famílias na tomada de decisão e na busca pelo melhor plano terapêutico, lado a lado.</p>
                   </div>
                 </div>
                 <div class="col-xl-4 d-flex align-items-stretch">
@@ -117,7 +139,9 @@
           </div>
         </div>
       </div>
-    </section><section id="about" class="about section">
+    </section>
+
+    <section id="about" class="about section">
       <div class="container">
         <div class="row gy-4 gx-5">
           <div class="col-lg-6 position-relative align-self-start" data-aos="fade-up" data-aos-delay="200">
@@ -127,7 +151,7 @@
 
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <h3>Sobre a Lúmen</h3>
-            <p>A Lúmen oferece um caminho claro e acolhedor para a superação. Entendemos que a recuperação é um processo único e, por isso, unimos suporte terapêutico humanizado a uma metodologia de consultoria especializada para garantir dignidade e resultados reais.</p>
+            <p>A Lúmen oferece um caminho claro e acolhedor para a superação. Entendemos que a recuperação é um processo único e, por isso, unimos suporte terapêutico humanizado a uma metodologia de consultoria especializada para garantir dignidade e resultados reais. <strong>Tratamento realizado em 90 ou 180 dias onde trabalharemos em prol da recuperação e serenidade de cada paciente.</strong></p>
             <ul>
               <li>
                 <i class="fa-solid fa-vial-circle-check"></i>
@@ -155,7 +179,52 @@
         </div>
       </div>
     </section>
-    <section id="stats" class="stats section light-background">
+
+    <!-- NOVA SEÇÃO: Tratamento e Estrutura -->
+    <section id="tratamento" class="services section light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Metodologia e Estrutura</h2>
+        <p>Equipe altamente treinada para atender e acolher todos os pacientes em cima de suas necessidades.</p>
+      </div>
+
+      <div class="container">
+        <div class="row gy-4">
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card border-0 shadow-sm p-4 h-100 rounded">
+              <h4 class="mb-4" style="color: #2c4964;"><i class="fa-solid fa-user-doctor me-2"></i> Equipe e Infraestrutura</h4>
+              <ul class="treatment-list">
+                <li><i class="bi bi-check-circle-fill"></i> Monitoramento 24 Horas pela equipe multidisciplinar e câmeras.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Enfermagem 24 horas.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Psiquiatra e Psicólogo.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Coach (especialista em dependência química).</li>
+                <li><i class="bi bi-check-circle-fill"></i> Terapeutas, Coordenadores e Monitores.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Alimentação balanceada por nutricionista (4 refeições diárias: café da manhã, almoço, café da tarde e jantar).</li>
+                <li><i class="bi bi-check-circle-fill"></i> Área de Lazer: Piscina, sauna, quadra de beach tênis, futvôlei e vôlei.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card border-0 shadow-sm p-4 h-100 rounded">
+              <h4 class="mb-4" style="color: #2c4964;"><i class="fa-solid fa-brain me-2"></i> Programa Terapêutico</h4>
+              <ul class="treatment-list">
+                <li><i class="bi bi-check-circle-fill"></i> Terapia racional emotiva.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Terapia cognitiva comportamental.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Plano de prevenção à recaída.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Guia de Passos.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Introdução de N.A e A.A.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Reuniões em grupo e individuais.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Reunião de vídeo terapia.</li>
+                <li><i class="bi bi-check-circle-fill"></i> Espiritualidade.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- FIM DA NOVA SEÇÃO -->
+
+    <section id="stats" class="stats section">
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="row gy-4">
           <div class="col-lg-3 col-md-6 d-flex flex-column align-items-center">
@@ -188,7 +257,9 @@
           </div>
         </div>
       </div>
-    </section><section id="gallery" class="gallery section">
+    </section>
+
+    <section id="gallery" class="gallery section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Galeria</h2>
         <p>Conheça nossa estrutura e o ambiente preparado para o seu acolhimento.</p>
@@ -255,6 +326,7 @@
         </div>
       </div>
     </section>
+
     <section id="doctors" class="doctors section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Equipe Médica</h2>
@@ -298,7 +370,9 @@
           </div>
         </div>
       </div>
-    </section><section id="faq" class="faq section light-background">
+    </section>
+    
+    <section id="faq" class="faq section light-background">
       <div class="container section-title" data-aos="fade-up">
         <h2>Perguntas Frequentes</h2>
         <p>Esclareça suas dúvidas sobre o processo de internação e acompanhamento terapêutico.</p>
@@ -328,6 +402,7 @@
         </div>
       </div>
     </section>
+
     <section id="contact" class="contact section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Contato</h2>
@@ -390,7 +465,8 @@
           </div>
         </div>
       </div>
-    </section></main>
+    </section>
+  </main>
 
   <footer id="footer" class="footer light-background">
     <div class="container footer-top">
