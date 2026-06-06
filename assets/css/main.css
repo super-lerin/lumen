@@ -108,7 +108,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: var(--heading-color);
+  color: #000000;
   font-family: var(--heading-font);
 }
 
@@ -872,7 +872,7 @@ h6 {
 --------------------------------------------------------------*/
 section,
 .section {
-  color: var(--default-color);
+  color: #666;
   background-color: var(--background-color);
   padding: 60px 0;
   scroll-margin-top: 72px;
@@ -996,7 +996,7 @@ section,
 }
 
 .hero .content .why-box .more-btn {
-  color: var(--contrast-color);
+  color: #666;
   background: color-mix(in srgb, var(--contrast-color), transparent 80%);
   display: inline-block;
   padding: 6px 30px 8px 30px;
@@ -1010,7 +1010,7 @@ section,
 
 .hero .content .why-box .more-btn:hover {
   background: var(--surface-color);
-  color: var(--accent-color);
+  color: #666;
 }
 
 .hero .content .icon-box {
