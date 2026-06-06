@@ -218,10 +218,98 @@
 .whatsapp-float:hover {
   transform: scale(1.08);
 }
+/* ==========================================
+   GALERIA SLIDER
+========================================== */
+
+.gallery-slider {
+  padding: 20px 0 60px;
+}
+
+.gallery-slider .swiper-slide {
+  transition: .3s;
+}
+
+.gallery-slider .swiper-slide img {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+
+  border-radius: 15px;
+
+  box-shadow: 0 8px 20px rgba(0,0,0,.15);
+}
+
+.gallery-slider .swiper-slide:hover {
+  transform: translateY(-5px);
+}
+
+.gallery-slider .swiper-button-next,
+.gallery-slider .swiper-button-prev {
+  color: #1977cc;
+}
+
+.gallery-slider .swiper-pagination-bullet-active {
+  background: #1977cc;
+}
+
+@media(max-width:768px){
+
+  .gallery-slider .swiper-slide img{
+      height:250px;
+  }
+
+}
 
 </style>
 </head>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
 
+  new Swiper('.gallery-slider', {
+
+    loop: true,
+
+    centeredSlides: true,
+
+    autoplay: {
+      delay: 3500,
+      disableOnInteraction: false
+    },
+
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true
+    },
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev'
+    },
+
+    breakpoints: {
+
+      320: {
+        slidesPerView: 1,
+        spaceBetween: 10
+      },
+
+      768: {
+        slidesPerView: 2,
+        spaceBetween: 20
+      },
+
+      1200: {
+        slidesPerView: 3,
+        spaceBetween: 30
+      }
+
+    }
+
+  });
+
+});
+</script>
 <body class="index-page">
 
   <header id="header" class="header sticky-top">
@@ -434,74 +522,61 @@
       </div>
     </section>
 
-    <section id="gallery" class="gallery section light-background">
-      <div class="container section-title" data-aos="fade-up">
-        <h2>Galeria</h2>
-        <p>Conheça nossa estrutura e o ambiente preparado para o seu acolhimento.</p>
-      </div>
+  <section id="gallery" class="gallery section light-background">
 
-      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
-        <div class="row g-0">
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-1.jpg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-1.jpg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-2.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-2.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-3.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-3.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-4.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-4.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-5.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-5.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-6.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-6.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-7.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-7.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
-          <div class="col-lg-3 col-md-4">
-            <div class="gallery-item">
-              <a href="assets/img-slide/slide-8.jpeg" class="glightbox" data-gallery="images-gallery">
-                <img src="assets/img-slide/slide-8.jpeg" alt="" class="img-fluid">
-              </a>
-            </div>
-          </div>
+  <div class="container section-title" data-aos="fade-up">
+    <h2>Galeria</h2>
+    <p>Conheça nossa estrutura e o ambiente preparado para o seu acolhimento.</p>
+  </div>
+
+  <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+    <div class="swiper gallery-slider">
+
+      <div class="swiper-wrapper">
+
+        
+
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-2.jpeg" class="img-fluid rounded" alt="">
         </div>
-      </div>
-    </section>
 
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-3.jpeg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-4.jpeg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-5.jpeg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-6.jpeg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-7.jpeg" class="img-fluid rounded" alt="">
+        </div>
+
+        <div class="swiper-slide">
+          <img src="assets/img-slide/slide-8.jpeg" class="img-fluid rounded" alt="">
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+
+    </div>
+
+  </div>
+
+</section>
     <section id="beneficios" class="doctors section">
       <div class="container section-title" data-aos="fade-up">
         <h2>Diferenciais Lúmen</h2>
