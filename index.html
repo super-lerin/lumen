@@ -240,6 +240,189 @@
 .sub-titulo-perguntas-frequentes {
   color: #666 !important;
 }
+
+/* ==========================================
+   NOVA HERO RESPONSIVA PREMIUM (PURA CSS)
+========================================== */
+
+.hero-lumen {
+  width: 100%;
+  min-height: 80vh;
+  position: relative;
+  /* Gradiente profundo simulando o amanhecer/foco de luz do lado direito superior */
+  background: radial-gradient(circle at 85% 20%, rgba(25, 119, 204, 0.25) 0%, rgba(12, 24, 40, 1) 100%), #0c1828;
+  padding: 140px 0 80px 0;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+/* Raio de luz ambiente de fundo */
+.hero-lumen::before {
+  content: "";
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(circle, rgba(25, 119, 204, 0.18) 0%, rgba(25, 119, 204, 0) 70%);
+  top: -10%;
+  right: -5%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.hero-lumen .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-lumen .hero-badge {
+  background: rgba(25, 119, 204, 0.15);
+  color: #4fa5ff;
+  border: 1px solid rgba(25, 119, 204, 0.3);
+  padding: 6px 18px;
+  border-radius: 50px;
+  font-size: 13px;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Poppins', sans-serif;
+}
+
+.hero-lumen h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.25;
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.hero-lumen h1 .highlight {
+  color: #1977cc;
+  font-weight: 800;
+}
+
+.hero-lumen p {
+  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
+  line-height: 1.65;
+  color: rgba(255, 255, 255, 0.85);
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+/* Botões Customizados da Hero */
+.hero-lumen .btn-hero-cta {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  color: #fff;
+  background: #1977cc;
+  text-decoration: none;
+  box-shadow: 0 4px 15px rgba(25, 119, 204, 0.35);
+}
+
+.hero-lumen .btn-hero-cta:hover {
+  background: #1463ab;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(25, 119, 204, 0.5);
+}
+
+.hero-lumen .btn-hero-secondary {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  font-size: 15px;
+  letter-spacing: 0.5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 32px;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  color: #ffffff;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  text-decoration: none;
+}
+
+.hero-lumen .btn-hero-secondary:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: #ffffff;
+  transform: translateY(-2px);
+}
+
+/* Ponto Focal de Luz Dinâmico (Lúmen Orb) */
+.lumen-glow-orb {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(25, 119, 204, 0.35) 0%, rgba(25, 119, 204, 0.05) 60%, transparent 100%);
+  position: relative;
+  animation: floatLumenGlow 5s ease-in-out infinite alternate;
+}
+
+.lumen-glow-orb::after {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: #ffffff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 
+    0 0 40px 15px rgba(255, 255, 255, 0.8), 
+    0 0 70px 35px #1977cc,
+    0 0 120px 60px rgba(25, 119, 204, 0.4);
+}
+
+@keyframes floatLumenGlow {
+  0% { transform: translateY(0px) scale(0.95); opacity: 0.8; }
+  100% { transform: translateY(-15px) scale(1.05); opacity: 1; }
+}
+
+/* ==========================================
+   RESPONSIVIDADE DA HERO
+========================================== */
+
+@media (max-width: 992px) {
+  .hero-lumen {
+    min-height: auto;
+    padding: 120px 0 70px 0;
+  }
+  
+  .hero-lumen h1 {
+    font-size: 36px;
+  }
+  
+  .hero-lumen p {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-lumen {
+    padding: 100px 0 60px 0;
+  }
+
+  .hero-lumen h1 {
+    font-size: 28px;
+  }
+
+  .hero-lumen .btn-hero-cta, 
+  .hero-lumen .btn-hero-secondary {
+    width: 100%;
+  }
+}
 </style>
 </head>
 <script>
@@ -289,6 +472,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
+
+
 </script>
 <body class="index-page">
 
@@ -337,7 +522,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   <main class="main">
     
-    <section id="hero" class="hero-lumen" data-aos="fade-in">
+   <section id="hero" class="hero-lumen d-flex align-items-center" data-aos="fade-in">
+      <div class="container" data-aos="zoom-out" data-aos-delay="100">
+        <div class="row justify-content-between align-items-center gy-5">
+          
+          <div class="col-lg-7 text-center text-lg-start content-box">
+            <span class="hero-badge">Consultoria & Suporte Terapêutico</span>
+            <h1>Clareza e acolhimento no caminho da <span class="highlight">recuperação</span></h1>
+            <p>Orientação humanizada e especializada para famílias e dependentes. Unimos técnica profissional, acolhimento integral e dignidade para construir um novo projeto de vida.</p>
+            
+            <div class="d-flex flex-column flex-sm-row justify-content-center justify-content-lg-start gap-3 mt-4">
+              <a href="https://wa.me/5521967226728" target="_blank" class="btn-hero-cta">
+                <i class="bi bi-whatsapp me-2"></i>Atendimento 24h
+              </a>
+              <a href="#tratamento" class="btn-hero-secondary">Conhecer Metodologia</a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 d-none d-lg-flex justify-content-center position-relative">
+            <div class="lumen-glow-orb"></div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
     <section id="hero-cards" class="section light-background pt-5">
