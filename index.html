@@ -681,7 +681,142 @@
     }
 
 }
+/* ==========================================
+   FORMULÁRIO PREMIUM
+========================================== */
 
+.contact-form {
+
+    background: #111111;
+
+    padding: 40px;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,.25);
+
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.contact-form .form-control,
+.contact-form .form-select {
+
+    height: 55px;
+
+    border-radius: 10px;
+
+    border: 1px solid #333;
+
+    background: #1a1a1a;
+
+    color: #ffffff;
+
+    transition: .3s;
+}
+
+.contact-form textarea.form-control {
+
+    height: 140px;
+
+    resize: none;
+
+    padding-top: 15px;
+}
+
+.contact-form .form-control::placeholder,
+.contact-form textarea::placeholder {
+
+    color: #999;
+}
+
+.contact-form .form-control:focus,
+.contact-form .form-select:focus {
+
+    background: #222;
+
+    border-color: #ffffff;
+
+    color: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(255,255,255,.08);
+
+    outline: none;
+}
+
+.contact-form label {
+
+    color: #ffffff;
+
+    font-weight: 600;
+
+    margin-bottom: 8px;
+}
+
+.contact-form .btn-whatsapp {
+
+    width: 100%;
+
+    height: 58px;
+
+    border: none;
+
+    border-radius: 10px;
+
+    background: #25D366;
+
+    color: #ffffff;
+
+    font-size: 18px;
+
+    font-weight: 700;
+
+    transition: .3s;
+
+    box-shadow:
+        0 8px 20px rgba(37,211,102,.25);
+}
+
+.contact-form .btn-whatsapp:hover {
+
+    transform: translateY(-2px);
+
+    background: #1ebe5d;
+
+    box-shadow:
+        0 12px 25px rgba(37,211,102,.35);
+}
+
+.contact-form .btn-whatsapp i {
+
+    margin-right: 10px;
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width:768px){
+
+    .contact-form{
+
+        padding:25px;
+    }
+
+    .contact-form .form-control,
+    .contact-form .form-select{
+
+        height:50px;
+    }
+
+    .contact-form .btn-whatsapp{
+
+        height:55px;
+        font-size:16px;
+    }
+
+}
 </style>
 </head>
 <script>
@@ -1047,13 +1182,13 @@ document.addEventListener('DOMContentLoaded', function() {
       <div class="container" data-aos="fade-up" data-aos-delay="100">
         <div class="swiper gallery-slider">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="assets/img-slide/foto2.jpg" class="img-fluid rounded" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img-slide/foto3.jpg" class="img-fluid rounded" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img-slide/foto1.jpg" class="img-fluid rounded" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img-slide/foto5.jpg" class="img-fluid rounded" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img-slide/foto6.jpg" class="img-fluid rounded" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img-slide/foto7.jpg" class="img-fluid rounded" alt=""></div>
-            <div class="swiper-slide"><img src="assets/img-slide/foto8.jpg" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto2.png" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto3.png" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto1.png" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto5.png" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto6.png" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto7.png" class="img-fluid rounded" alt=""></div>
+            <div class="swiper-slide"><img src="assets/img-slide/foto8.png" class="img-fluid rounded" alt=""></div>
           </div>
           <div class="swiper-pagination"></div>
           <div class="swiper-button-next"></div>
@@ -1061,7 +1196,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
       </div>
     </section>
- 
+
     <section id="beneficios" class="doctors section">
       <div class="container section-title" data-aos="fade-up" style="color: #fff">
         <h2 style="color: #fff">Diferenciais Lúmen</h2>
@@ -1168,28 +1303,34 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
 
           <div class="col-lg-8" style="color: #fff">
-            <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="200">
-              <div class="row gy-4" style="color: #fff">
-                <div class="col-md-6">
-                  <input type="text" name="name" class="form-control" placeholder="Seu Nome" required="">
+           <div class="contact-form">
+
+                <div class="mb-3">
+                    <label>Nome</label>
+                    <input type="text" class="form-control" name="Nome">
                 </div>
-                <div class="col-md-6 ">
-                  <input type="email" class="form-control" name="email" placeholder="Seu Email" required="">
+
+                <div class="mb-3">
+                    <label>Telefone</label>
+                    <input type="tel" class="form-control" name="Telefone">
                 </div>
-                <div class="col-md-12">
-                  <input type="text" class="form-control" name="subject" placeholder="Assunto" required="">
+
+                <div class="mb-3">
+                    <label>E-mail</label>
+                    <input type="email" class="form-control" name="Email">
                 </div>
-                <div class="col-md-12">
-                  <textarea class="form-control" name="message" rows="6" placeholder="Mensagem" required=""></textarea>
+
+                <div class="mb-3">
+                    <label>Mensagem</label>
+                    <textarea class="form-control" name="Mensagem"></textarea>
                 </div>
-                <div class="col-md-12 text-center">
-                  <div class="loading">Carregando</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Sua mensagem foi enviada. Obrigado!</div>
-                  <button type="submit">Enviar Mensagem</button>
-                </div>
-              </div>
-            </form>
+
+                <button class="btn-whatsapp">
+                    <i class="bi bi-whatsapp"></i>
+                    Falar no WhatsApp
+                </button>
+
+         </div>
           </div>
         </div>
       </div>
@@ -1239,5 +1380,35 @@ document.addEventListener('DOMContentLoaded', function() {
   </a>
 
 </body>
+<script>
+         document.getElementById('contactForm').addEventListener('submit', function(e){
 
+             e.preventDefault();
+
+             const nome = document.getElementById('nome').value;
+             const telefone = document.getElementById('telefone').value;
+             const email = document.getElementById('email').value;
+             const assunto = document.getElementById('assunto').value;
+             const mensagem = document.getElementById('mensagem').value;
+
+             const texto = `
+         *Nova Solicitação pelo Site*
+
+         👤 *Nome:* ${nome}
+         📱 *Telefone:* ${telefone}
+         📧 *E-mail:* ${email}
+         📋 *Assunto:* ${assunto}
+
+         💬 *Mensagem:*
+         ${mensagem}
+         `;
+
+             const numeroWhatsapp = "5521988074548";
+
+             const url = `https://wa.me/${numeroWhatsapp}?text=${encodeURIComponent(texto)}`;
+
+             window.open(url, '_blank');
+
+         });
+</script>
 </html>
