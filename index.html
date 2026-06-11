@@ -913,6 +913,15 @@
 .btn-whatsapp i {
     margin-right: 8px;
 }
+#daily-inspiration {
+  padding: 60px 0;
+  background-color: #000;
+}
+
+#rotating-content .card {
+  transition: all 0.5s ease;
+  backdrop-filter: blur(5px);
+}
   </style>
  
 <body class="index-page">
@@ -994,7 +1003,11 @@
         </div>
       </div>
     </section>
-
+    <section id="daily-inspiration" class="section">
+      <div class="container text-center">
+        <div id="rotating-content"></div>
+      </div>
+    </section>
     <section id="hero-cards" class="section light-background pt-5">
       <div class="container position-relative">
         <div class="content row gy-4">
@@ -1442,5 +1455,45 @@
              window.open(url, '_blank');
 
          });
+</script>
+<script>
+  // JSON contendo os 12 Passos de NA
+  const dozePassos = {
+    "passos": [
+      { "numero": 1, "descricao": "Admitimos que éramos impotentes perante a nossa adicção, que as nossas vidas se tinham tornado incontroláveis." },
+      { "numero": 2, "descricao": "Viemos a acreditar que um Poder superior a nós mesmos poderia devolver-nos a sanidade." },
+      { "numero": 3, "descricao": "Decidimos entregar a nossa vontade e a nossa vida aos cuidados de Deus, tal como O concebíamos." },
+      { "numero": 4, "descricao": "Fizemos um inventário moral, minucioso e destemido, de nós mesmos." },
+      { "numero": 5, "descricao": "Admitimos perante Deus, perante nós mesmos e perante outro ser humano a natureza exata das nossas falhas." },
+      { "numero": 6, "descricao": "Estivemos inteiramente prontos a deixar que Deus removesse todos estes defeitos de caráter." },
+      { "numero": 7, "descricao": "Pedimo-Lhe humildemente que removesse as nossas imperfeições." },
+      { "numero": 8, "descricao": "Fizemos uma lista de todas as pessoas que tínhamos prejudicado e dispusemo-nos a fazer reparações a todas elas." },
+      { "numero": 9, "descricao": "Fizemos reparações diretas a essas pessoas, sempre que possível, exceto quando fazê-lo pudesse prejudicá-las ou a terceiros." },
+      { "numero": 10, "descricao": "Continuámos a fazer o inventário pessoal e, quando estávamos errados, admitimo-lo prontamente." },
+      { "numero": 11, "descricao": "Procurámos, através da prece e da meditação, melhorar o nosso contacto consciente com Deus, tal como O concebíamos, pedindo apenas o conhecimento da Sua vontade em relação a nós e a força para a realizar." },
+      { "numero": 12, "descricao": "Tendo experimentado um despertar espiritual como resultado destes passos, tentámos levar esta mensagem aos adictos e praticar estes princípios em todas as nossas atividades." }
+    ]
+  };
+
+  // Função para exibir um passo aleatório
+  function exibirPassoAleatorio() {
+    const container = document.getElementById('rotating-content');
+    if (!container) return;
+
+    // Seleciona um índice aleatório baseado no array 'passos' do JSON
+    const randomIndex = Math.floor(Math.random() * dozePassos.passos.length);
+    const passo = dozePassos.passos[randomIndex];
+
+    // Injeta o conteúdo no HTML com o estilo premium do seu site
+    container.innerHTML = `
+      <div class="card p-4 shadow-lg text-center" style="background: rgba(255,255,255,0.05); border-radius: 20px; border: 1px solid rgba(255,255,255,0.1);">
+        <h4 style="color: #fff; margin-bottom: 15px; font-weight: 700;">Passo ${passo.numero}</h4>
+        <p style="color: #ccc; font-size: 1.1rem; font-style: italic;">"${passo.descricao}"</p>
+      </div>
+    `;
+  }
+
+  // Executa ao carregar a página
+  document.addEventListener('DOMContentLoaded', exibirPassoAleatorio);
 </script>
 </html>
